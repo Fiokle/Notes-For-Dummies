@@ -11,21 +11,42 @@ include("worker.php");
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-<div class="col-md-4"
-     style="margin:0 auto;float:none !important; margin-top:50px;margin-bottom:60px">
-    <div class="col-md-12 event-list-block">
-        <div class="cal-day">
-            <span>Today</span>
-          <?php echo date('l'); ?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="post">
+                <div id="quote-content">
+                    <p>
+                        <span style="opacity: 0.5;font-size: 10px">Quote Of The Day From Yoda</span>
+                    </p>
+                </div>
+                <p class="author">
+                    <span id="quote-title-dash">—</span> <span id="quote-title">
+                        Master Yoda
+                    </span>
+                </p>
+            </div>
         </div>
-        <ul class="event-list">
-          <?php loadnotes(); ?>
-        </ul>
-        <input type="text" class="form-control evnt-input" placeholder="NOTES">
-    </div>
-</div>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.slimscroll.js"></script>
-<script src="js/script.js"></script>
+        <div class="col-md-6"
+             style="margin: 100px auto;">
+            <div class="col-md-12 event-list-block">
+                <div class="cal-day">
+                    <span>Today</span>
+                  <?php echo date('l'); ?>
+                </div>
+                <ul class="event-list">
+                  <?php loadnotes(); ?>
+                </ul>
+                <input type="text" class="form-control evnt-input"
+                       placeholder="NOTES">
+            </div>
+        </div>
+        <div class="col-md-3" style="margin: 100px auto;">
+            <div id="gif-wrap">
+            </div>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.slimscroll.js"></script>
+        <script src="js/script.js"></script>
 </body>
 </html>
